@@ -14,6 +14,7 @@
         <a class="navbar-brand" href="<%= root_path %>">Brand</a>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in?  %>
+            <li><%= link_to "Destroy path", sessions_delete_path,method: "delete" %></li>
             <li><a href="<%= sessions_delete_path %>" data-method="delete">Log out</a></li>
           <% else %>
             <li><a href="<%= sessions_new_path %>">Sign in</a></li>
